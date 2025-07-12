@@ -1,7 +1,9 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
+*.py[cod]
 *$py.class
+*.pyo
 
 # C extensions
 *.so
@@ -60,6 +62,8 @@ cover/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+media/
+staticfiles/
 
 # Flask stuff:
 instance/
@@ -143,6 +147,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+*.sqlite3
 
 # Spyder project settings
 .spyderproject
@@ -188,6 +193,9 @@ cython_debug/
 #  you could uncomment the following to ignore the entire vscode folder
 # .vscode/
 
+# IDE
+.idea/
+
 # Ruff stuff:
 .ruff_cache/
 
@@ -205,3 +213,7 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# OS files
+.DS_Store
+Thumbs.db
