@@ -27,23 +27,18 @@ django-models/
     |    │           ├── admin_view.html
     |    │           ├── librarian_view.html
     |    │           ├── member_view.html
-    |    ├── mysite/
-    |    │   ├── __init__.py
-    |    │   ├── settings.py
-    |    │   ├── urls.py
-    |    │   ├── wsgi.py
-    |    ├── templates/
-    |    │   ├── base.html
-    |    │   └── registration/
-    |    │       ├── login.html
-    |    │       ├── signup.html
-    |   |
     │   ├── LibraryProject/
     │   │   ├── __init__.py
     │   │   ├── settings.py          # Project settings and configurations
     │   │   ├── urls.py              # Project URL configuration
     │   │   ├── asgi.py
     │   │   ├── wsgi.py
+    |    ├── templates/
+    |    │   ├── base.html
+    |    │   └── registration/
+    |    │       ├── login.html
+    |    │       ├── signup.html
+    |   |
     │   ├── bookshelf/                # Django app directory
     │   │   ├── __init__.py
     │   │   ├── admin.py             # Admin panel configuration
