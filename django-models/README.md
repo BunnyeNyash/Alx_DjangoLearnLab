@@ -35,6 +35,9 @@ django-models/
     |    │           ├── admin_view.html
     |    │           ├── librarian_view.html
     |    │           ├── member_view.html
+    |    |           ├── add_book.html
+    │    |           ├── edit_book.html
+    │    |           ├── delete_book.html
     │   ├── LibraryProject/
     │   │   ├── __init__.py
     │   │   ├── settings.py          # Project settings and configurations
