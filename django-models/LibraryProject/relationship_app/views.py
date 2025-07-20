@@ -35,3 +35,7 @@ class CustomLoginView(LoginView):
 class CustomLogoutView(LogoutView):
     """Class-based view for user logout."""
     template_name = 'relationship_app/logout.html'
+
+def register(request):
+    view = SignUpView.as_view()
+    return view(request)
