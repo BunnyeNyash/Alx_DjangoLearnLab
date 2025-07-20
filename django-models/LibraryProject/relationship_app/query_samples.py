@@ -13,9 +13,9 @@ def query_all_books_in_library(library_name):
     return books
 
 def query_librarian_for_library(library_name):
-    """Query the librarian for a specific library."""
+    """Query the librarian for a specific library using get."""
     library = Library.objects.get(name=library_name)
-    librarian = library.librarian
+    librarian = Librarian.objects.get(library=library)
     return librarian
 
 # Example usage
