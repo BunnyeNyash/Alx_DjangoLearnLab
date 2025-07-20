@@ -1,17 +1,48 @@
-# Introduction to Django
+# Django Models
 
-## Django Development Environment, Models, and Admin Interface Project
+## Deep Dive into Django Models and Views
 
-This project introduces the fundamentals of Django, focusing on setting up a development environment, creating and managing models with the Django ORM, and utilizing the Django Admin interface. It is part of the `Alx_DjangoLearnLab` repository under the `Introduction_to_Django` directory.
+This project is meant to solidify understanding of Django’s ORM capabilities, view configurations, and user authentication features. There is the implementation of complex model relationships, development of both function-based and class-based views, and management of user authentication and permissions. It is part of the `Alx_DjangoLearnLab` repository under the `django-models` directory.
 
 ### Repository
 
 - GitHub: [Alx_DjangoLearnLab](https://github.com/BunnyeNyash/Alx_DjangoLearnLab.git)
-- Directory: `Introduction_to_Django`
+- Directory: `django-models`
 
 ### Project Structure
 ```
-Introduction_to_Django/
+django-models/
+    ├── db.sqlite3
+    ├── manage.py
+    ├── relationship_app/
+    │   ├── __init__.py
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── migrations/
+    │   ├── models.py
+    │   ├── urls.py
+    │   ├── views.py
+    │   ├── query_samples.py
+    │   └── templates/
+    │       └── relationship_app/
+    │           ├── list_books.html
+    │           ├── library_detail.html
+    │           ├── login.html
+    │           ├── logout.html
+    │           ├── register.html
+    │           ├── admin_view.html
+    │           ├── librarian_view.html
+    │           ├── member_view.html
+    ├── mysite/
+    │   ├── __init__.py
+    │   ├── settings.py
+    │   ├── urls.py
+    │   ├── wsgi.py
+    ├── templates/
+    │   ├── base.html
+    │   └── registration/
+    │       ├── login.html
+    │       ├── signup.html
     ├── LibraryProject/                # Django project directory
     │   ├── manage.py                 # Command-line utility for managing the project
     │   ├── README.md                 # Project-specific README
@@ -35,15 +66,15 @@ Introduction_to_Django/
     │   │   ├── update.md            # Documentation for update operation
     │   │   ├── delete.md            # Documentation for delete operation
     │   │   ├── CRUD_operations.md   # Summary of CRUD operations
-    └── README.md                     # This file
+└── README.md
 ```
 
 ### How to Use
 
-1. **Clone the Repository** and navigate to `Introduction_to_Django/LibraryProject`:
+1. **Clone the Repository** and navigate to `django-models`:
    ```bash
    git clone https://github.com/BunnyeNyash/Alx_DjangoLearnLab.git
-   cd Introduction_to_Django/LibraryProject
+   cd django-models
    ```
 
 2. **Create and Activate a Virtual Environment**:
@@ -77,11 +108,8 @@ Introduction_to_Django/
 
 ### Tasks
 
-- **Task 0: Introduction to Django Development Environment Setup**
-  - **Objective**: Set up a Django development environment and create a project named `LibraryProject`. Run the development server and explore the project structure.
-  
-- **Task 1: Implementing and Interacting with Django Models**
-  - **Objective**: Create a `bookshelf` app, define a `Book` model with `title`, `author`, and `publication_year` fields, and perform CRUD operations using the Django ORM. Document each operation in separate Markdown files (`create.md`, `retrieve.md`, `update.md`, `delete.md`) and summarize in `CRUD_operations.md`.
-
-- **Task 2: Utilizing the Django Admin Interface**
-  - **Objective**: Register the `Book` model with the Django Admin interface, customize the admin display to show `title`, `author`, and `publication_year`, and add filters and search functionality for enhanced usability.
+- **Task 0**: Implement advanced model relationships (`ForeignKey`, `ManyToMany`, `OneToOne`) and create a `query_samples.py` script.
+- **Task 1**: Create function-based and class-based views, configure URL patterns, and provide templates.
+- **Task 2**: Set up user authentication with login, logout, and registration.
+- **Task 3**: Implement role-based access control with a UserProfile model and role-specific views.
+- **Task 4**: Add custom permissions to the Book model and secure views with permission checks.
