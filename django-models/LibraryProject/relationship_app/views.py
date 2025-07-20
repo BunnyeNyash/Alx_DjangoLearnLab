@@ -8,6 +8,7 @@ from django.urls import reverse_lazy
 from .models import Book, Library, UserProfile, Author
 from .models import Library        # for checker purposes
 from django.contrib.auth.decorators import user_passes_test, login_required, permission_required
+from django.contrib.auth.decorators import permission_required        # for checker purposes
 from django import forms
 from django.http import HttpResponse
 
