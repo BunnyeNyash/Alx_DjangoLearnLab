@@ -12,40 +12,40 @@ This project is meant to solidify understanding of Django’s ORM capabilities, 
 ### Project Structure
 ```
 django-models/
-    ├── db.sqlite3
-    ├── manage.py
-    ├── relationship_app/
-    │   ├── __init__.py
-    │   ├── admin.py
-    │   ├── apps.py
-    │   ├── migrations/
-    │   ├── models.py
-    │   ├── urls.py
-    │   ├── views.py
-    │   ├── query_samples.py
-    │   └── templates/
-    │       └── relationship_app/
-    │           ├── list_books.html
-    │           ├── library_detail.html
-    │           ├── login.html
-    │           ├── logout.html
-    │           ├── register.html
-    │           ├── admin_view.html
-    │           ├── librarian_view.html
-    │           ├── member_view.html
-    ├── mysite/
-    │   ├── __init__.py
-    │   ├── settings.py
-    │   ├── urls.py
-    │   ├── wsgi.py
-    ├── templates/
-    │   ├── base.html
-    │   └── registration/
-    │       ├── login.html
-    │       ├── signup.html
     ├── LibraryProject/                # Django project directory
     │   ├── manage.py                 # Command-line utility for managing the project
     │   ├── README.md                 # Project-specific README
+    |   ├── db.sqlite3
+    |   ├── relationship_app/
+    |    │   ├── __init__.py
+    │   ├── admin.py
+    |    │   ├── apps.py
+    |    │   ├── migrations/
+    |    │   ├── models.py
+    |    │   ├── urls.py
+    |    │   ├── views.py
+    |    │   ├── query_samples.py
+    |    │   └── templates/
+    |    │       └── relationship_app/
+    |    │           ├── list_books.html
+    |    │           ├── library_detail.html
+    |    │           ├── login.html
+    |    │           ├── logout.html
+    |    │           ├── register.html
+    |    │           ├── admin_view.html
+    |    │           ├── librarian_view.html
+    |    │           ├── member_view.html
+    |    ├── mysite/
+    |    │   ├── __init__.py
+    |    │   ├── settings.py
+    |    │   ├── urls.py
+    |    │   ├── wsgi.py
+    |    ├── templates/
+    |    │   ├── base.html
+    |    │   └── registration/
+    |    │       ├── login.html
+    |    │       ├── signup.html
+    |   |
     │   ├── LibraryProject/
     │   │   ├── __init__.py
     │   │   ├── settings.py          # Project settings and configurations
