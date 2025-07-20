@@ -71,3 +71,5 @@ def librarian_view(request):
 @user_passes_test(is_member)
 def member_view(request):
     return HttpResponse("Welcome, Member!")
+
+user.profile.role == 'Admin'
