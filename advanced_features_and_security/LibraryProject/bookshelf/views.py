@@ -30,3 +30,25 @@ def delete_book(request, pk):
 def book_list(request):
     books = Book.objects.all()
     return render(request, 'bookshelf/list_books.html', {'books': books})
+
+
+class BookForm(forms.Form):
+    title = forms.CharField(max_length=200)
+    author = forms.CharField(max_length=100)
+    publication_year = forms.IntegerField()
+
+@permission_required('bookshelf.can_create', raise_exception=True)
+def create_book(request):
+    if request.method == 'POST':
+        form = BookForm(request.POST)
+        if form.is_valid():
+            author, _ = Author.objects.get_or_create(name=form.cleaned_data['author'])
+            Book.objects.create(
+                title=form.cleaned_data['title'],
+                author=author,
+                publication_year=form.cleaned_data['publication_year']
+            )
+            return redirect('book_list')
+    else:
+        form = BookForm()
+    return render(request, 'bookshelf/book_form.html', {'form': form})
