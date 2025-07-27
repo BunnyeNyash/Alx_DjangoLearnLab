@@ -158,3 +158,16 @@ SECURE_BROWSER_XSS_FILTER = True
 # - SESSION_COOKIE_SECURE and CSRF_COOKIE_SECURE ensure cookies are HTTPS-only.
 
 
+DEBUG = False  # Ensure False in production
+SECURE_BROWSER_XSS_FILTER = True
+X_FRAME_OPTIONS = 'DENY'
+SECURE_CONTENT_TYPE_NOSNIFF = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
+# Comments:
+# - DEBUG=False prevents sensitive info leaks.
+# - SECURE_BROWSER_XSS_FILTER enables browser XSS protection.
+# - X_FRAME_OPTIONS='DENY' prevents clickjacking.
+# - SECURE_CONTENT_TYPE_NOSNIFF prevents MIME-type sniffing.
+# - CSRF_COOKIE_SECURE and SESSION_COOKIE_SECURE ensure cookies are sent over HTTPS
