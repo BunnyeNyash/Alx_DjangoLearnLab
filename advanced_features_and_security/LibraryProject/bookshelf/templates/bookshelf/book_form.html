@@ -1,0 +1,18 @@
+<!-- bookshelf/templates/bookshelf/book_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Form</title>
+</head>
+<body>
+    <h1>{% if book %}Edit Book{% else %}Add Book{% endif %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="title" value="{% if book %}{{ book.title }}{% endif %}" required>
+        <input type="text" name="author" value="{% if book %}{{ book.author.name }}{% endif %}" required>
+        <input type="number" name="publication_year" value="{% if book %}{{ book.publication_year }}{% endif %}" required>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
