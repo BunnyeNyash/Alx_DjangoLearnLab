@@ -43,7 +43,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bookshelf.apps.BookshelfConfig',
     'relationship_app',
+    'csp',
 ]
+
+CSP_DEFAULT_SRC = ("'self'",)
+CSP_STYLE_SRC = ("'self'", "'unsafe-inline'")
+CSP_SCRIPT_SRC = ("'self'",)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -151,3 +156,5 @@ SECURE_BROWSER_XSS_FILTER = True
 # - SECURE_HSTS_SECONDS enforces HTTPS for 1 year.
 # - SECURE_HSTS_INCLUDE_SUBDOMAINS and PRELOAD extend HSTS to subdomains and allow preloading.
 # - SESSION_COOKIE_SECURE and CSRF_COOKIE_SECURE ensure cookies are HTTPS-only.
+
+
